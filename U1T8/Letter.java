@@ -6,8 +6,10 @@ public class Letter {
 
     // constructor; since there are no instance variables to initialize,
     // this constructor has no parameters and has an empty body: { }
-    public Letter(String writer) { }
-       me = writer;
+    public Letter(String writer) { 
+        String me = writer;
+    }
+      
     /* add your writeLe;tter method here: TO BE IMPLEMENTED IN #4 */
     public void writeLetter(String name) {
         greeting (name);
