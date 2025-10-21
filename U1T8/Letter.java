@@ -3,11 +3,11 @@ package U1T8;
 public class Letter {
     // instance variables
     /* none yet */
-
+    private String me;
     // constructor; since there are no instance variables to initialize,
     // this constructor has no parameters and has an empty body: { }
     public Letter(String writer) { 
-        String me = writer;
+        me = writer;
     }
       
     /* add your writeLe;tter method here: TO BE IMPLEMENTED IN #4 */
@@ -15,6 +15,7 @@ public class Letter {
         greeting (name);
         specialMessage();
         closing();
+        System.out.println("From: " + me);
     }
 
     public void greeting(String name) {
