@@ -24,5 +24,6 @@ public class stringLength {
       } else {
         System.out.println(str2 + " was found in " + str1 + " at index " + str1.indexOf(str2));
       }
+      scan.close();
     }
 }

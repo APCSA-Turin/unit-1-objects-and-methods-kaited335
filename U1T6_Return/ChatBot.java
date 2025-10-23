@@ -24,6 +24,7 @@ public class ChatBot {
    }
    public void myFavoriteFood (){
     System.out.println("I don't have a favorite food because I'm a chatbot and I can't eat anything.");
+    System.out.println(number);
   }
 
    public String myBirthday(String month, int day, int year){

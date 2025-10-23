@@ -24,6 +24,7 @@ public class RectangleRunner {
         System.out.println("Rectangle 2's Area: " + rect2.calculateArea() + ", Box Volume: " + rect2.calculateBoxVolume(rect2Height));
 
         // finish the program as described below
+        myScanner.close();
     }
 }
 
