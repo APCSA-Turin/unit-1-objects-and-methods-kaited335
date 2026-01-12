@@ -48,7 +48,10 @@ public class BagelShop {
             return false;
         }
         int pay = quantity * bagelPrice;
+        card.chargeCard(pay);
+        profit += pay;
         inventory -= quantity;
+        return true;
     }
 
     /** First checks to see if the provided cardPIN matches the PIN number of the
@@ -66,14 +69,21 @@ public class BagelShop {
      @return  Return true if the purchase was successful, false if the purchase was unsuccessful
      */
     public boolean returnBagels(CreditCard card, int quantity, String cardPIN) {
-        // TO BE IMPLEMENTED
+        if (!card.checkPIN(cardPIN)) {
+            return false;
+        }
+        int back = quantity * bagelPrice;
+        card.reduceBalance(back);
+        profit -= back;
+        return true;
     }
 
     /** Deposits all current profits in the vendorBank
      *  and sets profits back to 0.
      */
     public void depositProfits() {
-        // TO BE IMPLEMENTED
+        vendorBank.vendorDeposit(profit);
+        profit = 0;
     }
 
     public String shopInfo() {

@@ -43,7 +43,7 @@ public class CreditCard {
      *  @return  True if the PIN numbers match, otherwise return false
      */
     public boolean checkPIN(String toCheckPIN) {
-        if (this.personalPIN == toCheckPIN) {
+        if (this.personalPIN.equals(toCheckPIN)) {
             return true;
         } else {
             return false;

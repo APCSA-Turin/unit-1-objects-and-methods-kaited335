@@ -25,7 +25,11 @@ public class Bank {
      * @param payment  The amount of the payment
      */
     public void makePayment(CreditCard card, int payment) {
-        // TO BE IMPLEMENTED
+       card.reduceBalance(payment);
+       onHandCash += payment;
+       if (card.getBalanceOwed() > HIGH_BALANCE_AMT) {
+        card.chargeCard(HIGH_BALANCE_FEE);
+       }
     }
 
     /** Method used by vendors (such as bagel shops!) to deposit profits.
@@ -35,7 +39,8 @@ public class Bank {
      * @param depositAmount  The amount of the deposit
      */
     public void vendorDeposit(int depositAmount) {
-        // TO BE IMPLEMENTED
+        vendorAccountBalance += depositAmount;
+        onHandCash += depositAmount;
     }
 
     /** Utility method to compare the balance of two credit cards; returns the
@@ -46,7 +51,15 @@ public class Bank {
      * @return  The CreditCard with the lower balance, or null if both have same balance
      */
     public CreditCard lowerBalance(CreditCard card1, CreditCard card2) {
-        // TO BE IMPLEMENTED
+        int card1Bal = card1.getBalanceOwed();
+        int card2Bal = card2.getBalanceOwed(); 
+        if (card1Bal < card2Bal) {
+            return card1;
+        } else if (card2Bal < card1Bal) {
+            return card2;
+        } else {
+            return null;
+        }
     }
 
     public String bankInfo() {
