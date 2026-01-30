@@ -1,59 +1,37 @@
-public class Main{ 
+public class Main {
     public static void main(String[] args) {
-    int[] nums1 = {5, 8, 9, 10, 4};
+        int[] nums1 = {1, 2, 3, 4, 5, 6};
 
-int numStr1 = 5;
+int[] nums2 = {10, 11, 12, 13, 14, 15, 16, 17};
 
-ArrayManipulator manipulator = new ArrayManipulator(nums1, numStr1);
+int[] combined = ArrayAlgorithms.combine(nums1, nums2);
 
-System.out.println("------------");
+for (int i = 0; i < combined.length; i++) {
 
-System.out.println(manipulator.getNumsMiddleIndex());
+    System.out.print(combined[i] + " ");
 
-System.out.println(manipulator.getNumsAverage());
+}
 
-System.out.println(manipulator.sameLengths());
+System.out.println();
 
-System.out.println(manipulator.getNumAt(3));
-
-System.out.println(manipulator.getWordAt(3));
-
-System.out.println(manipulator.updateWordsListAt(3, "hello"));
-
-System.out.println(manipulator.getWordAt(3));
-
-System.out.println(manipulator.howLongLastWord());
-
-System.out.println(manipulator.updateWordsListAt(4, "updated"));
-
-System.out.println(manipulator.howLongLastWord());
+System.out.println("combined list has " + combined.length + " elements");
 
 
 
-int[] nums2 = {2, 5, 7, 9};
+int[] nums3 = {5, 8, 6, 2};
 
-int numStr2 = 6;
+int[] nums4 = {1, 7, 10, 0, 9};
 
-System.out.println("------------");
+int[] combined2 = ArrayAlgorithms.combine(nums3, nums4);
 
-manipulator = new ArrayManipulator(nums2, numStr2);
+for (int i = 0; i < combined2.length; i++) {
 
-System.out.println(manipulator.getNumsMiddleIndex());
+    System.out.print(combined2[i] + " ");
 
-System.out.println(manipulator.getNumsAverage());
+}
 
-System.out.println(manipulator.sameLengths());
+System.out.println();
 
-System.out.println(manipulator.getNumAt(3));
-
-System.out.println(manipulator.updateWordsListAt(6, "not valid"));
-
-System.out.println(manipulator.howLongLastWord());
-
-System.out.println(manipulator.updateWordsListAt(5, "valid"));
-
-System.out.println(manipulator.howLongLastWord());
-
-
+System.out.println("combined list has " + combined2.length + " elements");
     }
 }
