@@ -1,3 +1,4 @@
+
 public class Main {
     public static void main(String[] args) {
         int[] nums = {6, 1, 3, 4, 7, 5};
