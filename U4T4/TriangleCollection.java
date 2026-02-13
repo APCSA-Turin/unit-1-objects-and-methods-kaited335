@@ -1,4 +1,4 @@
-package U4T4;
+
 
 public class TriangleCollection {
   // array of Triangles

@@ -1,4 +1,3 @@
-package U4T4;
 
 public class Point {
   private int x;
