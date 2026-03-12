@@ -4,23 +4,26 @@ public class RemoveDuplicates {
 
   public RemoveDuplicates() {}
 
-  public void removeDuplicates(ArrayList<Integer> intList) {
+  public ArrayList<Integer> removeDuplicates(ArrayList<Integer> intList) {
         ArrayList<Integer> unique = new ArrayList<Integer>();
 
         for (int i = 0; i < intList.size(); i++) {
-            if (unique.size() == 0) {
+            if (i == 0) {
                 unique.add(intList.get(i));
             } else {
+                int size = intList.size();
                 for (int j = 0; j < unique.size(); j++) {
-                    if (intList.get(i) == unique.get(j)) {
+                    if (intList.get(i).equals(unique.get(j))) {
                         intList.remove(i);
                         i--;
                         break;
-                    } else {
-                        unique.add(intList.get(i));
-                    }
+                    } 
+                }
+                if (size == intList.size()) {
+                    unique.add(intList.get(i));
                 }
             }
         }
+        return intList;
   }
 }
