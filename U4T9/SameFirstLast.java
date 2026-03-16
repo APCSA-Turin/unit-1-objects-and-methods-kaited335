@@ -4,7 +4,10 @@ public class SameFirstLast {
   public SameFirstLast() {}
 
   public boolean sameFirstLast(ArrayList<Integer> list) {
-    if (list.size() < 1) {
+    if (list == null) {
+        return false;
+    }
+    if (list.size() == 0) {
         return false;
     }
     if ( list.get(0) == null || list.get(list.size() - 1) == null) {
@@ -13,6 +16,9 @@ public class SameFirstLast {
         } else {
             return false;
         }
+    }
+    if (list.size() == 0) {
+        return false;
     }
     if (list.get(0).equals(list.get(list.size() - 1))) {
         return true;
