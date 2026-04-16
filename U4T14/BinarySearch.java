@@ -5,16 +5,16 @@ public class BinarySearch {
   public static int binarySearch(int[] elements, int target) {
 
     int loopCounter = 0; // for testing
-    int leftIdx = 0;  // TODO: assign this initial value
-    int rightIdx = elements.length - 1;  // TODO: assign this initial value
-    boolean found = false;
+    int leftIdx = 0;  // assign this initial value
+    int rightIdx = elements.length - 1;  // assign this initial value
+  
 
-    while (leftIdx <= rightIdx) { // TODO: determine this condition (hint: see slides 61-63)
+    while (leftIdx <= rightIdx) { // determine this condition (hint: see slides 61-63)
       loopCounter++; // for testing
       System.out.print(loopCounter + " "); // for testing
-      int middleIdx = (leftIdx + rightIdx) / 2; // TODO: determine what this should be
+      int middleIdx = (leftIdx + rightIdx) / 2; // determine what this should be
         
-      // TODO: write the rest of the code to compare middleIdx to the target
+      // write the rest of the code to compare middleIdx to the target
         if (elements[middleIdx] == target) {
             return middleIdx;
         } else if (elements[middleIdx] > target) {

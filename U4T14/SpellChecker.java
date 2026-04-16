@@ -43,14 +43,14 @@ public class SpellChecker {
   public boolean binarySpellCheck(String word) {
     int loopCounter = 0; // for testing
 
-    int leftIdx = 0;  // TODO: assign this initial value
-    int rightIdx = dictionary.size() - 1;  // TODO: assign this initial value
+    int leftIdx = 0;  // assign this initial value
+    int rightIdx = dictionary.size() - 1;  // assign this initial value
 
-    while (leftIdx <= rightIdx) { // TODO: determine this condition (hint: see slides 61-63)
+    while (leftIdx <= rightIdx) { // determine this condition (hint: see slides 61-63)
       loopCounter++; // for testing
-      int middleIdx = (leftIdx + rightIdx) / 2; // TODO: determine what this should be
+      int middleIdx = (leftIdx + rightIdx) / 2; // determine what this should be
         
-      // TODO: write the rest of the code to compare middleIdx to the target
+      //  rite the rest of the code to compare middleIdx to the target
         if (dictionary.get(middleIdx).equals(word)) {
           System.out.println(loopCounter);
             return true;
