@@ -53,7 +53,8 @@ public class FunWith2DArrays {
         for (int i = 0; i < array[0].length; i++) {
             for (int j = 0; j < array.length; j++) {
                 if (array[j][i].equals(target)) {
-                    index = {i, j};
+                    index[0] = i;
+                    index[1] = j;
                     return index;
                 }
             }
