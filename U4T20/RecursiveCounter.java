@@ -5,7 +5,7 @@ public class RecursiveCounter {
     public static void main(String [] args) {
         int n = 40;
         long startTime = System.nanoTime();
-        int fibRec = fibonacci(n);
+        int fibRec = fib(n);
         long endTime = System.nanoTime();
         long recursiveTime = endTime - startTime;
 
@@ -16,18 +16,17 @@ public class RecursiveCounter {
         System.out.println("Fibonacci(" + n + ")");
 
         System.out.println("Recursive: " + iterativeFib(n)+ " | Time: " + recursiveTime / 1e6 + " ms");
-        System.out.println("Iterative: " + fibonacci(n) + " | Time: " + iterativeTime / 1e6 + " ms");
+        System.out.println("Iterative: " + fib(n) + " | Time: " + iterativeTime / 1e6 + " ms");
     }
 
-    private static int fibonacci(int x) {
-        if (x == 1) {
+    public static int fib(int n) {
+        if (n == 1) {
             return 0;
         }
-        if (x == 2) {
+        if (n == 2) {
             return 1;
         }
-        // double recursive method call
-        return fibonacci(x - 1) + fibonacci(x - 2);
+        return fib(n - 1) + fib(n - 2);
     }
 
     public static int iterativeFib(int n){
