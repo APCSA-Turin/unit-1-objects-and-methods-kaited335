@@ -48,7 +48,7 @@ public class Algorithm2DArrays {
     int sum = 0;
     for (int row = 0; row < seatingChart.length; row++) {
         for (int col = 0; col < seatingChart[row].length; col++) {
-            sum += seatingChart[row][col].getGrade();
+            
             studentCount++;
         }
     }
